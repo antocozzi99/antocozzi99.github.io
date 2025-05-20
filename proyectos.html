@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyectos | Rigoberto</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="images/pancake.jpg" type="image/jpg">
+</head>
+<body>
+  <header>
+    <h1 id="titulo-header">Proyectos</h1>
+  </header>
+
+  <nav>
+    <a href="index.html" id="nav-inicio">Inicio</a>
+    <a href="sobremi.html" id="nav-sobre-mi">Sobre mí</a>
+    <a href="proyectos.html" id="nav-proyectos">Proyectos</a>
+    <a href="contacto.html" id="nav-contacto">Contacto</a>
+  </nav>
+
+  <section>
+    <h2 id="titulo-proyecto-1">Panqueque más grande del mundo</h2>
+    <p id="desc-proyecto-1">Desde el año 2001 he tenido la idea de cocinar el panqueque más grande del mundo, por lo que en 2015 decidí hacer este sueño realidad. Para esto, utilicé 299 huevos, 300 kilos de harina y 30 litros de leche.</p>
+
+    <h2 id="titulo-proyecto-2">Panqueque intergaláctico</h2>
+    <p id="desc-proyecto-2">En 2017 un cliente confidencial me solicitó cocinar un panqueque intergaláctico. Para esto, utilicé ingredientes que no puedo describir aquí, dado que son confidenciales. A continuación les cuento un par de proyectos más.</p>
+
+    <ul>
+      <li id="proj1">Participación en la Fiesta del Panqueque - Dublín 2017</li>
+      <li id="proj2">Panqueque más pequeño del mundo (1 cm de diámetro)</li>
+      <li id="proj3">Panqueque arcoíris</li>
+    </ul>
+
+    <img src="images/pancake.jpg" width = "50%" alt="Panqueques deliciosos preparados por Rigoberto">
+    <img src="images/rainbowpancakes.jpg" width = "50%" alt="Panqueque arcoíris">
+    <img src="images/tinypacake.jpg" width = "50%" alt="Panqueque miniatura">
+  </section>
+  
+  <!-- Incluye primero idioma.js -->
+  <script src="idioma.js"></script>
+  <script>
+  const textos = {
+    es: {
+      "titulo-header": "Proyectos",
+      "nav-inicio": "Inicio",
+      "nav-sobre-mi": "Sobre mí",
+      "nav-proyectos": "Proyectos",
+      "nav-contacto": "Contacto",
+      "titulo-proyecto-1": "Panqueque más grande del mundo",
+      "desc-proyecto-1": "Desde el año 2001 he tenido la idea de cocinar el panqueque más grande del mundo, por lo que en 2015 decidí hacer este sueño realidad. Para esto, utilicé 299 huevos, 300 kilos de harina y 30 litros de leche.",
+      "titulo-proyecto-2": "Panqueque intergaláctico",
+      "desc-proyecto-2": "En 2017 un cliente confidencial me solicitó cocinar un panqueque intergaláctico. Para esto, utilicé ingredientes que no puedo describir aquí, dado que son confidenciales. A continuación les cuento un par de proyectos más.",
+      "proj1": "Participación en la Fiesta del Panqueque - Dublín 2017",
+      "proj2": "Panqueque más pequeño del mundo (1 cm de diámetro)",
+      "proj3": "Panqueque arcoíris"
+    },
+    en: {
+      "titulo-header": "Projects",
+      "nav-inicio": "Home",
+      "nav-sobre-mi": "About Me",
+      "nav-proyectos": "Projects",
+      "nav-contacto": "Contact",
+      "titulo-proyecto-1": "Biggest pancake on Earth",
+      "desc-proyecto-1": "Since 2001, I've had the idea of cooking the biggest pancake on Earth, so in 2015 I decided to make this dream come true. For this, I used 299 eggs, 300 kilograms of flour, and 30 liters of milk.",
+      "titulo-proyecto-2": "Intergalactic pancake",
+      "desc-proyecto-2": "In 2017, a confidential client asked me to cook an intergalactic pancake. For this, I used ingredients that I can't describe here, as they are confidential. Next, I will share a couple of other projects.",
+      "proj1": "Participation in the Pancake Festival - Dublin 2017",
+      "proj2": "World's smallest pancake (1 cm diameter)",
+      "proj3": "Rainbow pancake"
+    }
+  };
+  const idiomaGuardado = localStorage.getItem('idiomaSeleccionado') || 'es';
+  cambiarIdioma(idiomaGuardado);
+  </script>
+  
+
+  <footer>
+    <p>&copy; 2025 Rigoberto Panqueques</p>
+  </footer>
+</body>
+</html>

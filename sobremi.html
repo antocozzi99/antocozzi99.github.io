@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre mí | Rigoberto</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="images/pancake.jpg" type="image/jpg">
+</head>
+<body>
+  <header>
+    <h1 id="titulo-header">Sobre mí</h1>  <!-- Ya con texto para evitar warning -->
+  </header>
+
+  <nav>
+    <a href="index.html" id="nav-inicio">Inicio</a> <!-- Opcional: también agregar texto aquí -->
+    <a href="sobremi.html" id="nav-sobre-mi">Sobre mí</a>
+    <a href="proyectos.html" id="nav-proyectos">Proyectos</a>
+    <a href="contacto.html" id="nav-contacto">Contacto</a>
+  </nav>
+
+  <section>
+    <h2 id="titulo-sobre-mi">Sobre mí</h2> <!-- Texto agregado para evitar warning -->
+    <p id="contenido-sobre-mi">Soy un cocinador de panqueques, fan de los atardeceres también.</p> <!-- Texto para evitar vacío -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rigoberto Panqueques</p>
+  </footer>
+
+  <!-- Incluye primero idioma.js -->
+  <script src="idioma.js"></script>
+
+  <!-- Luego defines los textos y llamas a la función -->
+  <script>
+    const textos = {
+      es: {
+        "titulo-header": "Sobre mí",
+        "nav-inicio": "Inicio",
+        "nav-sobre-mi": "Sobre mí",
+        "nav-proyectos": "Proyectos",
+        "nav-contacto": "Contacto",
+        "titulo-sobre-mi": "Sobre mí",
+        "contenido-sobre-mi": "Soy un cocinador de panqueques, fan de los atardeceres también."
+      },
+      en: {
+        "titulo-header": "About Me",
+        "nav-inicio": "Home",
+        "nav-sobre-mi": "About Me",
+        "nav-proyectos": "Projects",
+        "nav-contacto": "Contact",
+        "titulo-sobre-mi": "About Me",
+        "contenido-sobre-mi": "I am pancakes cooker, fan of the sunsets as well."
+      }
+    };
+
+    const idiomaGuardado = localStorage.getItem('idiomaSeleccionado') || 'es';
+    cambiarIdioma(idiomaGuardado);
+  </script>
+</body>
+</html>
+

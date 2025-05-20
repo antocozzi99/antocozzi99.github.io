@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Rigoberto</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="images/pancake.jpg" type="image/jpg">
+</head>
+<body>
+  <header>
+    <h1 id="titulo-header">Contacto</h1> <!-- Texto inicial para evitar encabezado vacío -->
+  </header>
+
+  <nav>
+    <a href="index.html" id="nav-inicio">Inicio</a>
+    <a href="sobremi.html" id="nav-sobre-mi">Sobre mí</a>
+    <a href="proyectos.html" id="nav-proyectos">Proyectos</a>
+    <a href="contacto.html" id="nav-contacto">Contacto</a>
+  </nav>
+
+  <section>
+    <h2 id="titulo-contacto">Ponte en contacto</h2> <!-- Texto inicial -->
+    <p id="correo">Correo: rigoberto@pancakes.com</p> <!-- Texto inicial -->
+    <a href = "https://recetasdecocina.elmundo.es/2024/12/panqueques-receta-facil-esponjosa.html" > Linkedin</a>
+  </section>
+
+  <!-- Incluye primero idioma.js -->
+  <script src="idioma.js"></script>
+  <script>
+  const textos = {
+    es: {
+      "titulo-header": "Contacto",
+      "nav-inicio": "Inicio",
+      "nav-sobre-mi": "Sobre mí",
+      "nav-proyectos": "Proyectos",
+      "nav-contacto": "Contacto",
+      "titulo-contacto": "Ponte en contacto",
+      "correo": "Correo: rigoberto@pancakes.com",
+      "linkedin": "LinkedIn: Mi perfil"
+    },
+    en: {
+      "titulo-header": "Contact",
+      "nav-inicio": "Home",
+      "nav-sobre-mi": "About Me",
+      "nav-proyectos": "Projects",
+      "nav-contacto": "Contact",
+      "titulo-contacto": "Get in Touch",
+      "correo": "Email: rigoberto@pancakes.com",
+      "linkedin": "LinkedIn: My profile"
+    }
+  };
+  const idiomaGuardado = localStorage.getItem('idiomaSeleccionado') || 'es';
+  cambiarIdioma(idiomaGuardado);
+  </script>
+  
+  <footer>
+    <p>&copy; 2025 Rigoberto Panqueques</p>
+  </footer>
+</body>
+</html>
+
