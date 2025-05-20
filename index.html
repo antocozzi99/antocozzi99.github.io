@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <title>Inicio | Portafolio</title>
+  <link rel="stylesheet" href="estilo.css">
   <link rel="icon" href="images/pancake.jpg" type="image/jpg">
 </head>
-
 <body>
   <header>
     <h1 id="titulo-header">Bienvenido a mi Portafolio</h1> <!-- Texto para evitar vacío -->
     <p id="subtitulo-header">Explora mi trabajo y trayectoria profesional.</p> <!-- Texto para evitar vacío -->
+    <div>
+      <button class="idioma-btn" onclick="cambiarIdioma('es')">Español</button>
+      <button class="idioma-btn" onclick="cambiarIdioma('en')">English</button>
+    </div>
   </header>
 
+  <nav>
+    <a href="index.html" id="nav-inicio">Inicio</a>
+    <a href="sobremi.html" id="nav-sobre-mi">Sobre mí</a>
+    <a href="proyectos.html" id="nav-proyectos">Proyectos</a>
+    <a href="contacto.html" id="nav-contacto">Contacto</a>
+  </nav>
 
   <section>
     <h2 id="bienvenida">Hola, soy Rigoberto</h2> <!-- Texto para evitar vacío -->
     <p id="descripcion">Me gusta cocinar panqueques al atardecer.</p> <!-- Texto para evitar vacío -->
-    <h2 id="bienvenida">Algunos de mis proyectos</h2> <!-- Texto para evitar vacío -->
-    <h3 id="titulo-proyecto-1">Panqueque más grande del mundo</h2>
-      <p id="desc-proyecto-1">Desde el año 2001 he tenido la idea de cocinar el panqueque más grande del mundo, por lo
-        que en 2015 decidí hacer este sueño realidad. Para esto, utilicé 299 huevos, 300 kilos de harina y 30 litros de
-        leche.</p>
-
-      <h3 id="titulo-proyecto-2">Panqueque intergaláctico</h2>
-        <p id="desc-proyecto-2">En 2017 un cliente confidencial me solicitó cocinar un panqueque intergaláctico. Para
-          esto, utilicé ingredientes que no puedo describir aquí, dado que son confidenciales. A continuación les cuento
-          un par de proyectos más.</p>
-
-        <ul>
-          <li id="proj1">Participación en la Fiesta del Panqueque - Dublín 2017</li>
-          <li id="proj2">Panqueque más pequeño del mundo (1 cm de diámetro)</li>
-          <li id="proj3">Panqueque arcoíris</li>
-        </ul>
-
-        <img src="images/pancake.jpg" width="50%" alt="Panqueques deliciosos preparados por Rigoberto">
-        <img src="images/rainbowpancakes.jpg" width="50%" alt="Panqueque arcoíris">
-        <img src="images/tinypacake.jpg" width="50%" alt="Panqueque miniatura">
-    <br>
-        <a href="https://recetasdecocina.elmundo.es/2024/12/panqueques-receta-facil-esponjosa.html"> Receta secreta de panqueque intergaláctico</a>
-
   </section>
 
   <footer>
     <p>&copy; 2025 Rigoberto Panqueques</p>
   </footer>
 
-</body>
+  <!-- Incluye primero idioma.js -->
+  <script src="idioma.js"></script>
+  <script>
+    const textos = {
+      es: {
+        "titulo-header": "Bienvenido a mi Portafolio",
+        "subtitulo-header": "Explora mi trabajo y trayectoria profesional.",
+        "nav-inicio": "Inicio",
+        "nav-sobre-mi": "Sobre mí",
+        "nav-proyectos": "Proyectos",
+        "nav-contacto": "Contacto",
+        "bienvenida": "Hola, soy Rigoberto",
+        "descripcion": "Me gusta cocinar panqueques al atardecer."
+      },
+      en: {
+        "titulo-header": "Welcome to my Portfolio",
+        "subtitulo-header": "Explore my work and professional background.",
+        "nav-inicio": "Home",
+        "nav-sobre-mi": "About me",
+        "nav-proyectos": "Projects",
+        "nav-contacto": "Contact",
+        "bienvenida": "Hi, I'm Rigoberto",
+        "descripcion": "I like to cook pancakes at the sunset."
+      }
+    };
 
+    const idiomaGuardado = localStorage.getItem('idiomaSeleccionado') || 'es';
+    cambiarIdioma(idiomaGuardado);
+  </script>
+</body>
 </html>
